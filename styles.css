@@ -1,0 +1,80 @@
+/* Ensures consistent box-sizing for all elements across the document. */
+html {
+    box-sizing: border-box;
+  }
+  
+  /* Applies inherited box-sizing to all elements, pseudo-elements, and their before/after counterparts. */
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+  
+  /* Styles for the main piano container. */
+  #piano {
+    background-color: #00471b; /* Dark green background for the piano body. */
+    width: 992px; /* Fixed width of the piano. */
+    height: 290px; /* Fixed height of the piano. */
+    margin: 80px auto; /* Centers the piano horizontally and adds vertical spacing. */
+    padding: 90px 20px 0 20px; /* Padding inside the container. */
+    position: relative; /* Allows positioning of child elements within this container. */
+    border-radius: 10px; /* Rounds the corners of the piano. */
+  }
+  
+  /* Container for the piano keys. */
+  .keys {
+    background-color: #040404; /* Black background for the key area. */
+    width: 949px; /* Width of the key area. */
+    height: 180px; /* Height of the key area. */
+    padding-left: 2px; /* Adds spacing on the left side. */
+    overflow: hidden; /* Prevents elements from overflowing the container. */
+  }
+  
+  /* Styles for each white key. */
+  .key {
+    background-color: #ffffff; /* White color for the keys. */
+    position: relative; /* Positions the keys relative to their container. */
+    width: 41px; /* Fixed width for white keys. */
+    height: 175px; /* Fixed height for white keys. */
+    margin: 2px; /* Spacing between keys. */
+    float: left; /* Aligns keys horizontally within the .keys container. */
+    border-radius: 0 0 3px 3px; /* Rounds the bottom corners of the keys. */
+  }
+  
+  /* Styles for black keys and their position. */
+  .key.black--key::after {
+    background-color: #1d1e22; /* Dark grey color for black keys. */
+    content: ""; /* Empty content to render the pseudo-element. */
+    position: absolute; /* Positioned relative to its parent (.key). */
+    left: -18px; /* Positions the black key offset from its parent. */
+    width: 32px; /* Fixed width for black keys. */
+    height: 100px; /* Fixed height for black keys. */
+    border-radius: 0 0 3px 3px; /* Rounds the bottom corners of black keys. */
+  }
+  
+  /* Styles for the logo above the piano. */
+  .logo {
+    width: 100px; /* Fixed width for the logo. */
+    position: absolute; /* Positioned relative to the #piano container. */
+    top: 0px; /* Places the logo at the top of the piano container. */
+    opacity: 0.3; /* Set the opacity of an element to 30% */
+  }
+  
+  /* Responsive styles for screens smaller than 768px. */
+  @media (max-width: 768px) {
+    #piano {
+      width: 358px; /* Reduces the piano width for smaller screens. */
+    }
+  
+    .keys {
+      width: 318px; /* Adjusts the width of the key container. */
+    }
+  
+    .logo {
+      width: 150px; /* Scales down the logo size. */
+    }
+  }
+  
+  /* Placeholder for responsive styles between 769px and 1199px. */
+  @media (max-width: 1199px) and (min-width: 769px) {
+  
+  }
+  
