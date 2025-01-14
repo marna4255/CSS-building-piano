@@ -20,7 +20,7 @@ This is a simple piano layout built using HTML and CSS. It simulates a piano key
 
 ## Screenshot:
 
-![Piano Layout](./img/piano.jpg)
+![Piano Layout](<./![alt](https://)>)
 
 ## How to Use:
 
